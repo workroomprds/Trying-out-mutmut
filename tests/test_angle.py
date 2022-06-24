@@ -21,6 +21,9 @@ def test_hr_gt_12():
     assert angle.between(15, 0) == 90
 
 
+def test_odd_hours_and_minutes():
+    assert angle.between(413.9410929040945, 168.36399694656427) == 747.951194556551 # from probe - clearly undesirable!?
+
 def test_great_correction():
     assert angle.between(6, 31) == 9
 
