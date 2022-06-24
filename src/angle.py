@@ -10,7 +10,7 @@ def hours_hand(hour, minutes):
     return base + correction
 
 def minutes_hand(hour, minutes):
-    return minutes * (DEGREES_IN_MIN)
+    return (minutes % MIN_IN_HOURS) * (DEGREES_IN_MIN)
 
 def between(hour, minutes):
     return abs(hours_hand(hour, minutes) - minutes_hand(hour, minutes))

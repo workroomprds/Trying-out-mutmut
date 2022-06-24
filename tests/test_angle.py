@@ -22,7 +22,7 @@ def test_hr_gt_12():
 
 
 def test_odd_hours_and_minutes():
-    assert angle.between(413.9410929040945, 168.36399694656427) == 747.951194556551 # from probe - clearly undesirable!?
+    assert angle.between(413.9410929040945, 168.36399694656427) == 27.951194556551 # returns float within bounds
 
 def test_great_correction():
     assert angle.between(6, 31) == 9
