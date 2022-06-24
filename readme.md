@@ -106,6 +106,18 @@ We dug into this
   * tests for hard-to-calculate numbers (i.e. result in float) - how to find these? Run a few randoms in, pick the odd one, check it, keep it.
 
 ---
+wrote a probe `probes/probe_angle.py` to run with `python -m probes.probe_angle`
+
+probe revealed that 
+* routine doesn't manage minutes >60 well
+* routine doesn't produce integers for non-integer input
+* routine crashes on text entry
+wrote a new test for float hrs/mins and mins>360 to capture current behaviour
+adjusted code to manage minutes
+adjusted test to match
+run mutation tests again? Now 10 mutants, and all killed.
+
+---
 ### JamesFails
 ! tried to run code from console, not shell
 
